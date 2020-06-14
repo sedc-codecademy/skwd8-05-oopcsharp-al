@@ -8,6 +8,7 @@ namespace SEDC.DataTypesAndBranching
         {
             #region Variables and data types
 
+            //Declaration of several data type variables in C#
             int number = 10;
             double decimalNumber = 10.5;
             char character = 'C';
@@ -21,7 +22,10 @@ namespace SEDC.DataTypesAndBranching
             Console.WriteLine(words);
 
             Console.WriteLine("==============================================");
+            #endregion
 
+            #region Parsing into appropriate type
+            //Using Parse() method for parsing into int (Throws an error if parse fails)
             int parsedNumber = int.Parse("23");
             double parsedIntoDouble = double.Parse("23.5");
 
@@ -38,10 +42,10 @@ namespace SEDC.DataTypesAndBranching
             //int numberParsed = int.Parse("23.5");
             //Console.WriteLine(numberParsed);
 
-
+            //Using TryParse() method for parsing into int. Safe option, and having more control over the code
             int parseInt;
-            //bool ifParsed = int.TryParse("12", out parseInt);
-            //Console.WriteLine(parseInt);
+            bool ifParsed = int.TryParse("12", out parseInt);
+            Console.WriteLine(parseInt);
 
             Console.WriteLine("==============================================");
 
@@ -59,8 +63,9 @@ namespace SEDC.DataTypesAndBranching
             string name = Console.ReadLine();
             Console.WriteLine("Hello there " + name);
 
+            #endregion
 
-
+            #region Branching structures
 
             Console.WriteLine("==============================================");
             int a = 10;
@@ -94,7 +99,7 @@ namespace SEDC.DataTypesAndBranching
                 case "yellow":
                     Console.WriteLine("Yellow means PREPARE!");
                     break;
-                case "green":    
+                case "green":
                     Console.WriteLine("Green means GO!");
                     break;
                 default:
@@ -120,17 +125,7 @@ namespace SEDC.DataTypesAndBranching
                     Console.WriteLine("There is no such a day in the week!");
                     break;
             }
-
-
-
-
-
-
-
-
             #endregion
-
-
 
             Console.ReadLine();
         }
