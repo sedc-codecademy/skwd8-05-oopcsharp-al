@@ -339,3 +339,25 @@ Console.WriteLine(day);
 int year = currentDateTime.Year;
 Console.WriteLine(year);
 ```
+## Building methods from scratch 🔹
+### Why methods
+* Methods are named blocks of code that can be executed multiple times
+* Methods in C# must have a strict return type meaning that every method must define what type will be the return value
+* If nothing is returned from a function, the return type is void
+* If there is a certain return type, a value of that type must be returned otherwise, there will be an error
+* Parameters must also be defined by a certain type
+* When the method is called, the types that are passed must correspond to the parameter types that were defined, otherwise it will throw an error
+* Methods are a great way to organize, bundle and create reusable and scalable code
+### Method structure in C#
+```csharp
+// The type before the name is the return type
+// public and static will be discussed in next classes
+public static string SayHello(string name){
+	string result = $"Hello there {name}!";
+    return result;
+}
+// Void function that does not return anything
+public static void SayBye(){
+	Console.WriteLine("Byeeeee!");
+}
+```
