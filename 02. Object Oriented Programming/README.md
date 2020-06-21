@@ -121,3 +121,110 @@ if( today == Days.Friday )
 	Console.WriteLine("PARTY");
 }
 ```
+## Inheritance 🔹
+### What is the concept of inheritance
+* Since we know that OOP should represent real world entities and events, we can find our self in a case where some entities depend on other or are part of other
+* This means that we need a new way to connect entities that have a more tight connection and involvement to each other
+* For that reason we can use one of the main concepts of OOP which is called inheritance
+* Inheritance is creating a tree of classes which inherit from one another properties and methods
+* There are parent and child classes
+  * Parent - The class from which other classes inherit
+  * Child - The class that inherits from another class
+* Inheritance works by having a parent class share it's proeprties and methods to all child classes so they can all use them without declaring them
+* In C# a class can inherit from another class ONLY 1 TIME
+### Why is inheritance useful
+* Inheritance is usefull for creating entities that are general and then more speific ones that share all the properties and methods from the genreal one
+* This makes the classes with the same properties and methods, have one central place where their shared properties and methods are stored
+* When we change the parent method, the method will be changed for all child classes as well
+* It also makes our code cleaner because we no longer have the properties and methods from the parent in our child classes
+### Inheritance in C# with classes
+```csharp
+public class Human
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+    public void PrintInfo()
+    {
+        Console.WriteLine($"This is {Name} and it's of the age of {Age}.");
+    }
+}
+```
+```csharp
+public class Programmer : Human
+{
+    public List<string> ProgrammingLanugages { get; set; }
+    public void DevelopApp()
+    {
+        Console.WriteLine($"The programmer {Name} is developing an app...");
+    }
+}
+```
+### Inheritance and constructors
+* When inheritance happens, all constructors of the inheritance chain are called ( The child, the parent, the parents parent etc )
+* Because they are all called we can also call the parents constructor manually and pass some values to it
+* This way the child gets some values and instead of using them all, it can bass some to the parents constructor
+```csharp
+public class Human
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+    public Human(string name, int age)
+    {
+		Name = name;
+		Age = age;
+	}
+    public void PrintInfo()
+    {
+        Console.WriteLine($"This is {Name} and it's of the age of {Age}.");
+    }
+}
+```
+```csharp
+public class Programmer : Human
+{
+    public List<string> ProgrammingLanugages { get; set; }
+    public Programmer(string name, int age, List<string> languages)
+	    : base(name, age)
+    {
+		ProgrammingLanguages = languages;
+	}
+    public void DevelopApp()
+    {
+        Console.WriteLine($"The programmer {Name} is developing an app...");
+    }
+}
+```
+```
+### Overriding parent methods
+* Methods that parents have can be marked as virtual, meaning that those methods can be changed from the child classes if they so choose
+* When a child class wants to change the implementation of some method in the parent and that method is virtual, it just needs to type the method with override keyword
+* The child class can change the implementation completly or use the parents functionality and add to it
+```csharp
+public class Human
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+    public virtual void PrintInfo()
+    {
+        Console.WriteLine($"This is {Name} and it's of the age of {Age}.");
+    }
+}
+```
+```csharp
+public class Programmer : Human
+{
+    public List<string> ProgrammingLanugages { get; set; }
+    public void DevelopApp()
+    {
+        Console.WriteLine($"The programmer {Name} is developing an app...");
+    }
+    public override void PrintInfo()
+    {
+        Console.WriteLine($"This is {Name} and these are the programming lanugages they know:");
+        foreach (string language in ProgrammingLanugages)
+        {
+            Console.WriteLine(language);
+        }
+    }
+}
+```
