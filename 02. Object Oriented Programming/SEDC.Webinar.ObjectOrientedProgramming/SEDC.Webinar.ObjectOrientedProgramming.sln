@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEDC.Webinar.Methods", "SEDC.Webinar.Methods\SEDC.Webinar.Methods.csproj", "{3DF52441-BE51-4557-A877-A3CC39B34C32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEDC.Webinar.Classes", "SEDC.Webinar.Classes\SEDC.Webinar.Classes.csproj", "{25E1D83A-5824-4366-9D8C-45D7DE06F9ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEDC.Webinar.Inheritance", "SEDC.Webinar.Inheritance\SEDC.Webinar.Inheritance.csproj", "{00099655-BAEC-4263-8ABC-9B8F6490F642}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3DF52441-BE51-4557-A877-A3CC39B34C32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DF52441-BE51-4557-A877-A3CC39B34C32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DF52441-BE51-4557-A877-A3CC39B34C32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DF52441-BE51-4557-A877-A3CC39B34C32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25E1D83A-5824-4366-9D8C-45D7DE06F9ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25E1D83A-5824-4366-9D8C-45D7DE06F9ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25E1D83A-5824-4366-9D8C-45D7DE06F9ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25E1D83A-5824-4366-9D8C-45D7DE06F9ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00099655-BAEC-4263-8ABC-9B8F6490F642}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00099655-BAEC-4263-8ABC-9B8F6490F642}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00099655-BAEC-4263-8ABC-9B8F6490F642}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00099655-BAEC-4263-8ABC-9B8F6490F642}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E3F594B-331D-4C91-B6E5-1A48B1004F81}
+	EndGlobalSection
+EndGlobal
