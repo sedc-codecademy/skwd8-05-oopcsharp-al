@@ -20,12 +20,14 @@
 * These classes can be connected to create a network of code that is connected to each other and make sense as a solution as a whole
 * We can even use a class as a type for a method so we have a class that has a property other class, or method that accepts another class etc.
 * All of the combinations are done to make the business logic closer from the real world to the code
+![Class](img/OOP1.png)
 ### Class vs Object
 * Class is the plan on how to build something
 * Object is the thing that is built it self
 * The class is the plan on how to build a house
 * The object is the house that was built by looking and carefully following the plan ( class )
 * We can build 2 houses from the same plan. The only thing different will be the location, the owner etc. but never the structure of the house
+![Class](img/OOP2.png)
 ### Declaration
 * Delaring a class means that we set the plan of what a class should have
 * We can't use the class it self in this state to use for values and actions
