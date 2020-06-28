@@ -1,5 +1,6 @@
 ﻿using SEDC.Webinar.DataAccess;
 using SEDC.Webinar.DomainModels;
+using SEDC.Webinar.PostAPI.ApiExceptionHandlers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,13 +23,13 @@ namespace SEDC.Webinar.PostAPI
                 else
                 {
                     //Throw new bad request exception
-                    throw new NotImplementedException();
+                    throw new Exception("Something went wrong!");
                 }
             }
             catch (Exception ex)
             {
                 //Handle the exception thrown
-                throw new NotImplementedException();
+                throw new BadRequestException("Bad request", ex, 400);
             }
         }
 
@@ -48,12 +49,12 @@ namespace SEDC.Webinar.PostAPI
                 else
                 {
                     //Throw new NotFound exception with status code 404
-                    throw new NotImplementedException();
+                    throw new Exception($"No post with Id: {id} exist!");
                 }
             }
             catch (Exception ex)
             {
-                throw new NotImplementedException();
+                throw new NotFoundException("Resource not found!", ex, 404);
             }
         }
     }

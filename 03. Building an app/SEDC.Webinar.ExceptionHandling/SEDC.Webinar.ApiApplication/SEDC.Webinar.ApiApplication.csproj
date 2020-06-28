@@ -5,4 +5,9 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SEDC.Webinar.DomainModels\SEDC.Webinar.DomainModels.csproj" />
+    <ProjectReference Include="..\SEDC.Webinar.PostAPI\SEDC.Webinar.PostAPI.csproj" />
+  </ItemGroup>
+
 </Project>

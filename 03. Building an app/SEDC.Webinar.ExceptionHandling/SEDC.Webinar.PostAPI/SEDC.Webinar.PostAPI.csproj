@@ -1,7 +1,12 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SEDC.Webinar.DataAccess\SEDC.Webinar.DataAccess.csproj" />
+    <ProjectReference Include="..\SEDC.Webinar.DomainModels\SEDC.Webinar.DomainModels.csproj" />
+  </ItemGroup>
 
 </Project>
