@@ -65,3 +65,24 @@ finally
 	Console.WriteLine("Everything is done!");
 }
 ```
+## Class Libraries 🔹
+* A project type that can hold classes only
+* We can't run a class library project
+* We must connect a project that can run to the class library so it can be used
+* To connect a project to another one in a Visual Studio solution there needs to be a reference
+* Reference to a class library can be added to the project that wants to use that class library
+* We can't connect two projects to one another, connection only works one way
+* References can't create a chain of projects that creates a circle connecting them one to another as well ( circular reference )
+* Class libraries are used to divide our code and create reusable blocks of code or divide the logic to separate projects
+* With class libraires we can manage which project uses which data safely
+### Example
+* We have an appliction in one project with a folder structure dividing our logic
+![Class Library example 1](img/classlibrary1.jpg)
+* The client requests another app so we create two application with folder structure 
+![Class Library example 2](img/classlibrary2.jpg)
+* But now we have a lot of the logic that is the same for the two projects
+![Class Library example 3](img/classlibrary3.jpg)
+* We don't want to have duplicate code so we decide to create a class library and shift our code there
+* The code can no be used by any number of projects
+* The class library also makes it impossible for any other application to access that logic except the ones that have reference to it
+![Class Library example 4](img/classlibrary4.jpg)
